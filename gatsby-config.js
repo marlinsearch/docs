@@ -12,11 +12,12 @@ require(`dotenv`).config({
     path: `.env.${process.env.NODE_ENV}`,
 })
 
+/*
 if (!process.env.GHOST_API_URL || !process.env.GHOST_API_KEY) {
     throw new Error(
         `GHOST_API_URL and GHOST_API_KEY are required to build. Check the CONTRIBUTING guide.`
     )
-}
+}*/
 
 const SERVICE_WORKER_KILL_SWITCH = (process.env.SERVICE_WORKER_KILL_SWITCH === `true`) || false
 
@@ -66,6 +67,7 @@ const plugins = [
             ],
         },
     },
+  /*
     `gatsby-transformer-yaml`,
     {
         resolve: `gatsby-source-ghost`,
@@ -74,6 +76,7 @@ const plugins = [
             contentApiKey: `${process.env.GHOST_API_KEY}`,
         },
     },
+ */
     `gatsby-plugin-catch-links`,
     /**
      *  Utility Plugins
@@ -96,27 +99,6 @@ const plugins = [
         options: {
             query: `
                 {
-                allGhostPost {
-                    edges {
-                        node {
-                            id
-                            slug
-                            published_at
-                            updated_at
-                            created_at
-                            feature_image
-                        }
-                    }
-                },
-                allGhostTag {
-                    edges {
-                        node {
-                            id
-                            slug
-                            feature_image
-                        }
-                    }
-                },
                 allMarkdownRemark{
                     edges {
                         node {
@@ -133,12 +115,6 @@ const plugins = [
                 }
             }`,
             mapping: {
-                allGhostPost: {
-                    sitemap: `pages`,
-                },
-                allGhostTag: {
-                    sitemap: `tags`,
-                },
                 allMarkdownRemark: {
                     sitemap: `pages`,
                 },

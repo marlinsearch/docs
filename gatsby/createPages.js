@@ -18,6 +18,7 @@ module.exports.createRedirects = ({ actions }) => {
     })
 }
 
+/*
 module.exports.createGhostPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const queryPromises = []
@@ -98,6 +99,7 @@ module.exports.createGhostPages = async ({ graphql, actions }) => {
 
     return Promise.all(queryPromises)
 }
+*/
 
 module.exports.createMarkdownPages = async ({ graphql, actions }) => {
     const { createPage } = actions

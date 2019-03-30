@@ -40,6 +40,7 @@ export const markdownFields = graphql`
 `
 
 // Used for single pages
+/*
 export const ghostPostFields = graphql`
     fragment GhostPostFields on GhostPost {
         # Main fields
@@ -169,3 +170,4 @@ export const ghostTagListFields = graphql`
         }
     }
 `
+*/

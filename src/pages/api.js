@@ -37,16 +37,6 @@ const APIPage = ({ data, location }) => {
                 </section>
 
                 <div className={`${Spirit.page.l} pb-vw4 pb-vw3-ns pt-vw4 pt-vw3-ns`}>
-                    <div className="grid-12">
-                        <div className={sectionStyles.headingContainer}>
-                            <h2 id="frontend-sdk" className={`${Spirit.h3} pt20 nt20`}>Frontend Frameworks</h2>
-                            <p className={`${Spirit.small} midgrey-l2 mt2`}>Frameworks for working with the Ghost API to build a publication website</p>
-                        </div>
-                        <div className={sectionStyles.cardContainer}>
-                            <APICard to="/api/handlebars-themes/" icon="ghostache">Ghost Themes</APICard>
-                            <APICard to="/api/gatsby/" icon="gatsby-logo">Gatsby</APICard>
-                        </div>
-                    </div>
 
                     <div className="grid-12 mt-vw4 mt20-ns">
                         <div className={sectionStyles.headingContainer}>
@@ -54,9 +44,8 @@ const APIPage = ({ data, location }) => {
                             <p className={`${Spirit.small} midgrey-l2 mt2`}>A full reference of API Endpoints</p>
                         </div>
                         <div className={sectionStyles.cardContainer}>
-                            <APICard to="/api/content/" icon="content-api-logo">Content API</APICard>
-                            <APICard to="/api/admin/" icon="admin-api-logo">Admin API</APICard>
-                            <APICard to="/api/webhooks/" icon="webhooks-logo">Webhooks</APICard>
+                            <APICard to="/api/manage/" icon="content-api-logo">Manage API</APICard>
+                            <APICard to="/api/admin/" icon="admin-api-logo">Search API</APICard>
                         </div>
                     </div>
 
@@ -66,7 +55,7 @@ const APIPage = ({ data, location }) => {
                             <p className={`${Spirit.small} midgrey-l2 mt2`}>Utilities to help build and manage Ghost</p>
                         </div>
                         <div className={sectionStyles.cardContainer}>
-                            <APICard to="/api/ghost-cli/" icon="ghost-cli-logo">Ghost-CLI</APICard>
+                            <APICard to="/api/marlin-cli/" icon="ghost-cli-logo">Marlin-CLI</APICard>
                             <APICard to="/api/migration/" icon="migration-logo">Migration</APICard>
                             <APICard href="https://gscan.ghost.org" icon="gscan-logo">GScan</APICard>
                             <APICard to="/api/javascript/sdk/" icon="javascript-logo">JavaScript SDK</APICard>
@@ -80,7 +69,7 @@ const APIPage = ({ data, location }) => {
                             <h4 className="f-supersmall dib ma0 pa0 bg-green pa1 br-pill pl3 pr3 tc white mt2 nudge-top--2">Coming soon</h4>
                         </div>
                         <div className={sectionStyles.cardContainer}>
-                            <APICard to="/api/javascript/" icon="javascript-logo">JavaScript</APICard>
+                            <APICard icon="javascript-logo" iconClass="stroke-midlightgrey o-30">JavaScript</APICard>
                             <APICard icon="ruby-logo" iconClass="stroke-midlightgrey o-30">Ruby</APICard>
                             <APICard icon="php-logo" iconClass="stroke-midlightgrey o-30">PHP</APICard>
                             <APICard icon="python-logo" iconClass="stroke-midlightgrey o-30">Python</APICard>

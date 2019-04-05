@@ -1057,3 +1057,7 @@ to be custom HTML.
 .customfont {
     font-family: Open Sans;
 }
+
+.h17 {
+    height: 5.0rem;
+}

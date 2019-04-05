@@ -25,7 +25,7 @@ const NavBar = ({ theme }) => {
     }
 
     return (
-        <nav className={`${Spirit.page.xl} flex flex-auto flex-nowrap items-center justify-between pt2 pb2`} data-cy="header-navigation">
+        <nav className={`${Spirit.page.xl} flex flex-auto flex-nowrap items-center justify-between`} data-cy="header-navigation">
             <div className="flex items-center pt3 pb3 nudge-bottom--2 w-sidebar-l pr8">
                 <a href="https://ghost.org" className="nudge-top--3">
                     <Logo theme={theme} />
